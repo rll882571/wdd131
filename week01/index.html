@@ -3,29 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agencia Fake</title>
-    <link rel="stylesheet" href="/week01/styles/layout.css.css">
+    <title>Rodrigo wdd131</title>
+    <link rel="stylesheet" href="styles/base.css">
     <meta name="description" content="Meu site">
-    <meta name="author" content="Rodrigo-WWD131">
+    <meta name="author" content="Rodrigo wdd131">
     <meta name="keywords" content=" etc..">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
     <header>
-        <div class="header-content">Header Content</div>
+        <h1> WWD 131: Dynamic Web Fundamentals - <span> Rodrigo F. Lima</span></h1>
         <nav>
-            <ul class="navbar">
-                <li><a href="">Home</a></li>
-                <li><a href="">Projects</a></li>
-                <li><a href="">Service</a></li>
-                <li><a href="">Contact US</a></li>
+            <ul>
+                <li><a href="">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/.">Canva</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/2?lang=por">Scripture</a></li>
+                <li><a href="#">Final Project</a></li>
             </ul>
         </nav>
     </header>
-    <section class="main-content">Main content</section>
-        <aside>Aside Content</aside>
-    
+    <main>
+        <section class="card">
+            <div class="card-one">
+                <h4>About Me</h4>
+                <div>
+                    <img class="profile" src="images/profile.img.png" alt="Hello, my name is Rodrigo">
+                    <p>
+                        Hello! My name is Rodrigo and I am from Ceará, Brazil. Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit. Impartamesoluta voluptatem error, sint id, ratione saepe doloribus tempora. Eaque,
+                        quisquam nisi quibusdam vitae iusto quidem.
+                    </p>
+                </div>
+                <div class="subsection">
+                    <h3>Fortaleza - Brazil <hr></h3>
+                    
+                    <img class="flag" src="images/fortaleza.jpg" alt="This is my city" width="200">
+                    <p>
+                        Fortaleza is the capital of Ceará, Brazil, and one of the most vibrant cities in the northeast region.
+                        With a population of over 2.7 million, it is a major cultural and economic hub. The city is renowned for
+                        its stunning beaches, rich history, and thriving industries in tourism, commerce, and entertainment.
+                        
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="card">
+            <div class="card-one">
+                <h4>Web Dev Resources</h4>
+            </div>
+            <ul>
+                <li><a href="">Dev.to Community</a></li>
+                <li><a href="">Smashing Magazine</a></li>
+                <li><a href="">CSS Tricks</a></li>
+                <li><a href="">W3 Schools</a></li>
+                <li><a href="">Udemy</a></li>
+                <li><a href="">Lorem Picsum Image</a></li>
+            </ul>
+        </section>
+    </main>
     <footer>
-        <div class="footer-content">Footer Content</div>
+        <p>
+            &copy; <span id="currentyear"></span> Rodrigo F. Lima - Fortaleza, Brazil
+        </p>
+        <p id="lastModified"></p>
     </footer>
-    </body>
-    </html>
+</body>
+</html>
