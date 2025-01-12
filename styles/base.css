@@ -87,7 +87,7 @@ nav ul li a {
     margin-bottom: 10px;
 }
 
-.card h4 {
+.card h2 {
     text-align: center;
     margin-top: 0%;
     margin-bottom: 5%;
@@ -102,7 +102,7 @@ nav ul li a {
     text-align: justify;
 }
 
-.card-one h4{
+.card-one h2{
     background: linear-gradient(to right, #003366, #0066cc);
     color: #fff;
     padding: 10px;
