@@ -1,114 +1,116 @@
+/*Mobile Css*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:wght@100;400&display=swap');
+header {
+    background-color: rgb(86, 19, 148);
+    color: #333;
+    padding: 10px 20px;
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-:root {
+h1 {
+    font-size: 1.5rem;
+    margin-left: 0;
+    text-align: center;
+    color: white;
+}
 
-    /* Core Colors */
-    --primary-color:#002F5D; 
-    --secondary-colo: #383434; 
-    --accent1-color: #f0c040; 
-    --accent2-color: #ffa500; 
-    --accent3-color: #f4f4f4; 
-    }
+nav {
+    display: none;
+}
 
-    
-        
-    body {
-        font-family: "Your Google Font", sans-serif;
-        margin: 0;
-        padding: 0;
-      }
-      
-      header {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        background-color: #002F5D;
-        font-size: 20px;
-        color: #fff;
-        padding: 10px;
-      }
-      
-      nav ul {
-        display: none; /* Ocultar por padrão em visualizações móveis */
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-      }
-      
-      nav ul li {
-        margin: 5px 0;
-      }
-      
-      nav a {
-        color: #fff;
-        text-decoration: none;
-      }
-      
-      nav a:hover {
-        color: #f8918a;
-        text-decoration: none;
-      }
-      
-      #bot {
-        background: none;
-        border: none;
-        color: #fff;
-        font-size: 24px;
-        cursor: pointer;
-      }
-      
-      .grid {
-        display: grid;
-      }
-      
-      main {
-        padding: 20px;
-      }
-      
-      figure {
-        margin: 10px 0;
-      }
-      
-      img {
-        width: 100%;
-        height: auto;
-      }
-      
-      footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px;
-      
-        clear: both;
-        position: relative;
-        height: 200px;
-        margin-top: 5vh;
-      }
-      
-      .temple-card {
-        border: 1px solid #ccc;
-        padding: 16px;
-        margin: 16px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        text-align: center;
-      }
-      .temple-card img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 8px;
-      }
-      .temple-container {
-        display: flex;
-        flex-direction: column;
-      }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
 
-      .hidden {
-        display: none;
-    }
-    
-    .visible {
-        display: flex; /* Or other desired styles for the visible menu */
-    }
+#menu {
+	font-size: 1.5rem;
+	border: 0;
+	background: none;
+	color: white;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+}
+
+#menu::before {
+	content: "☰";
+    color: white;
+}
+
+#menu.open::before {
+	content: "❎";
+}
+
+.navigation {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	color: #fff;
+}
+
+.navigation a {
+	display: none;
+	padding: 1rem;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+}
+.navigation a:hover {
+	background-color: #bbb;
+	font-weight: 700;
+}
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+	display: block;
+}
+
+.active::before { 
+	content: "📍";  /* just a wayfinding symbol for the user */
+}
+
+h2 a{
+    text-decoration: none;
+}
+
+h2 {
+	font-size: 1.2rem;
+	color: navy;
+	text-align: left;
+	margin: 1rem;
+    text-align: center;
+}
+
+main figcaption {
+	text-align: center;
+}
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    margin: 0;
+}
+
+.hide {
+	display: none;
+}
