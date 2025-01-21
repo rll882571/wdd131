@@ -62,3 +62,11 @@
         justify-content: center;
     }
 }
+
+footer {
+    background: linear-gradient(to right, #003366, #0066cc);
+    color: #fff;
+    padding: 2px;
+    text-align: center;
+    height: 60px;
+}
