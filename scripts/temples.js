@@ -1,27 +1,20 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const bot = document.getElementById("bot"); // Botão do menu
-    const navMenu = document.querySelector("nav ul"); // Menu de navegação
+// Get the current year and update the footer
+document.getElementById('currentyear').textContent = new Date().getFullYear();
 
-    bot.addEventListener("click", () => {
-        // Alterna a classe 'show' no menu
-        navMenu.classList.toggle("show");
+// Get the last modified date of the document and update the footer
+document.getElementById('lastModified').textContent = "Last Modified: " + document.lastModified;
 
-        // Alterna o ícone do botão
-        bot.textContent = navMenu.classList.contains("show") ? "✖" : "☰";
-    });
+//Responsive hamburger menu
+const hamButton = document.querySelector("#menu");
+const navigation = document.querySelector(".navigation");
+const headerTitle = document.querySelector("header h1");
 
-    // Garante que o menu seja exibido em telas maiores
-    window.addEventListener("resize", () => {
-        if (window.innerWidth > 768) {
-            navMenu.classList.remove("show"); // Remove a classe 'show'
-            bot.textContent = "☰"; // Restaura o ícone padrão
-        }
-    });
+hamButton.addEventListener("click", () => {
+    navigation.classList.toggle("open");
+    hamButton.classList.toggle("open");
+    headerTitle.classList.toggle("hide");
 });
 
-
-
-  
 const currentYear = new Date().getFullYear();
 document.getElementById("currentyear").textContent = currentYear;
 const lastModified = document.lastModified;
