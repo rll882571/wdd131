@@ -14,8 +14,3 @@ hamButton.addEventListener("click", () => {
     hamButton.classList.toggle("open");
     headerTitle.classList.toggle("hide");
 });
-
-const currentYear = new Date().getFullYear();
-document.getElementById("currentyear").textContent = currentYear;
-const lastModified = document.lastModified;
-document.getElementById("lastModified").textContent = `Last Modified: ${lastModified}`;
