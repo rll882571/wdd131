@@ -2,101 +2,85 @@
 
 :root {
     /* Core Colors */
-    --primary-color: #002F5D; 
+    --primary-color:#002F5D; 
     --secondary-colo: #383434; 
     --accent1-color: #f0c040; 
     --accent2-color: #ffa500; 
     --accent3-color: #f4f4f4; 
 }
 
-.img {
-    max-width: 320px;
-    margin-bottom: 8px;
-}
-
-.figure {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 40px;
-}
-
+/* Estilo para o Header */
 header {
-    background-color: #002F5D; /* Cor igual ao primeiro CSS */
-    color: white;
-    padding: 10px 20px; /* Espaçamento interno */
     display: flex;
-    justify-content: space-between; /* Alinha os itens para as extremidades */
-    align-items: center; /* Alinha verticalmente os itens */
+    justify-content: space-between;
+    align-items: center;
+    background-color: #002F5D; /* Cor igual ao primeiro layout */
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
 }
 
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav li {}
+
+nav a {
+    color: white;
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 1em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Imagens */
+img {
+    width: 100%; /* Ajusta a largura da imagem ao contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Bordas arredondadas */
+}
+
+/* Figura */
+figure {
+    display: inline-block;
+    width: 30%; /* Tamanho relativo das figuras */
+    margin: 1.5%; /* Espaçamento entre as figuras */
+    text-align: center; /* Centraliza o conteúdo da figura */
+}
+
+/* Texto da figura */
+figcaption {
+    text-align: center; /* Centraliza o texto abaixo da imagem */
+    margin-top: 5px; /* Adiciona espaçamento entre a imagem e o texto */
+}
+
+/* Layout responsivo para imagens */
+@media screen and (min-width: 600px) {
+    figure {
+        display: inline-block;
+        width: 30%; /* Tamanho proporcional da figura */
+        margin: 1.5%; /* Espaçamento entre as figuras */
+    }
+
+    img {
+        width: 100%; /* Garante que a imagem se ajuste à largura do contêiner */
+    }
+}
+
+/* Estilo para o Footer */
 footer {
-    background-color: #002F5D; /* Mesma cor do primeiro CSS */
-    color: #fff;
+    background-color: #002F5D; /* Cor igual ao primeiro layout */
+    color: white;
     text-align: center;
     padding: 10px;
-    height: 60px; /* Altura igual ao primeiro CSS */
+    position: relative;
+    height: 60px;
     margin-top: 5vh;
-}
-
-footer p {
-    margin: 0; /* Remove margens adicionais */
-}
-
-/* Larger View CSS */
-@media (min-width: 900px) {
-    #menu {
-        display: none; /* Hide hamburger button */
-    }
-
-    .navigation {
-        flex-direction: row;
-    }
-
-    .navigation a {
-        display: block;
-    }
-
-    main {
-        max-width: 1200px; /* Adjust max-width as needed */
-        justify-content: center;    
-    }
-
-    h2 {
-        font-size: 2rem;
-    }
-
-    main .res-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        padding: 20px;
-        justify-content: center;
-    }
-
-    main figure {
-        margin: 0;
-        padding: 0;
-    }
-
-    main .res-grid img {
-        max-width: 400px;
-        height: auto;
-    }
-}
-
-@media (min-width: 750px) {
-    .img {
-        max-width: 220px;
-        margin-bottom: 8px;
-    }
-
-    main .res-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        padding: 20px;
-        justify-content: center;
-    }
 }
