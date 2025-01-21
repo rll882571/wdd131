@@ -1,60 +1,40 @@
-.img {
+.img{
     max-width: 320px;
     margin-bottom: 8px;
-    height: auto; /* Adicione altura automática para manter a proporção */
-    display: block; /* Evita espaços extras abaixo da imagem */
 }
-
-.figure {
+.figure{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 40px;
 }
-
-main .res-grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr); /* Inicialmente uma coluna */
-    gap: 20px;
-    padding: 20px;
-    justify-content: center;
-}
-
 /*Larger View Css*/
-@media (min-width: 750px) {
-    main .res-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 colunas em telas maiores que 750px */
-    }
-    .img{
-        max-width: 100%; /* As imagens ocupam a largura total da célula do grid */
-    }
-}
-
 @media (min-width: 900px) {
     #menu {
-        display: none;
-    }
+		display: none; /* hide hamburger button */
+	}
 
-    .navigation {
-        flex-direction: row;
-    }
-
+	.navigation {
+		flex-direction: row;
+	}
     .navigation a {
-        display: block;
-    }
+		display: block;
+	}
 
     main {
-        max-width: 1200px;
-        justify-content: center;
+        max-width: 1200px; /* Adjust max-width as needed */
+        justify-content: center;    
     }
-
+    
     h2 {
         font-size: 2rem;
     }
-
-    main .res-grid {
-        padding: 20px;
+    main .res-grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 20px; 
         justify-content: center;
     }
 
@@ -62,8 +42,23 @@ main .res-grid {
         margin: 0;
         padding: 0;
     }
-
+    
     main .res-grid img {
-        max-width: 100%; /* As imagens ocupam a largura total da célula do grid */
+        max-width: 400px;
+        height: auto;
+        
+    }
+}
+@media (min-width:750px) {
+    .img{
+        max-width: 220px;
+        margin-bottom: 8px;
+    }
+    main .res-grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 20px; 
+        justify-content: center;
     }
 }
