@@ -1,40 +1,77 @@
-.img{
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:wght@100;400&display=swap');
+
+:root {
+    /* Core Colors */
+    --primary-color: #002F5D; 
+    --secondary-colo: #383434; 
+    --accent1-color: #f0c040; 
+    --accent2-color: #ffa500; 
+    --accent3-color: #f4f4f4; 
+}
+
+.img {
     max-width: 320px;
     margin-bottom: 8px;
 }
-.figure{
+
+.figure {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 40px;
 }
-/*Larger View Css*/
+
+header {
+    background-color: #002F5D; /* Cor igual ao primeiro CSS */
+    color: white;
+    padding: 10px 20px; /* Espaçamento interno */
+    display: flex;
+    justify-content: space-between; /* Alinha os itens para as extremidades */
+    align-items: center; /* Alinha verticalmente os itens */
+}
+
+footer {
+    background-color: #002F5D; /* Mesma cor do primeiro CSS */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    height: 60px; /* Altura igual ao primeiro CSS */
+    margin-top: 5vh;
+}
+
+footer p {
+    margin: 0; /* Remove margens adicionais */
+}
+
+/* Larger View CSS */
 @media (min-width: 900px) {
     #menu {
-		display: none; /* hide hamburger button */
-	}
+        display: none; /* Hide hamburger button */
+    }
 
-	.navigation {
-		flex-direction: row;
-	}
+    .navigation {
+        flex-direction: row;
+    }
+
     .navigation a {
-		display: block;
-	}
+        display: block;
+    }
 
     main {
         max-width: 1200px; /* Adjust max-width as needed */
         justify-content: center;    
     }
-    
+
     h2 {
         font-size: 2rem;
     }
-    main .res-grid{
+
+    main .res-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
-        padding: 20px; 
+        padding: 20px;
         justify-content: center;
     }
 
@@ -42,24 +79,24 @@
         margin: 0;
         padding: 0;
     }
-    
+
     main .res-grid img {
         max-width: 400px;
         height: auto;
-        
-    }
-}
-@media (min-width:750px) {
-    .img{
-        max-width: 220px;
-        margin-bottom: 8px;
-    }
-    main .res-grid{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        padding: 20px; 
-        justify-content: center;
     }
 }
 
+@media (min-width: 750px) {
+    .img {
+        max-width: 220px;
+        margin-bottom: 8px;
+    }
+
+    main .res-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 20px;
+        justify-content: center;
+    }
+}
