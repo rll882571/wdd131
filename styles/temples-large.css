@@ -1,0 +1,77 @@
+@media screen and (min-width: 600px) {
+    header {
+        background-color: #002F5D; /* Roxo escuro (você pode ajustar a cor) */
+        color: white;
+        padding: 10px 20px; /* Espaçamento interno */
+        display: flex;
+        justify-content: space-between; /* Alinha os itens para as extremidades */
+        align-items: center; /* Alinha verticalmente os itens */
+    }
+    
+    
+    nav ul {
+        list-style: none; /* Remove os marcadores de lista */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 20px; /* Espaçamento entre os itens do menu */
+    }
+    
+    nav li {
+    
+    }
+    
+    nav a {
+        color: white;
+        text-decoration: none; /* Remove o sublinhado dos links */
+        font-size: 1em;
+    }
+    
+    /* Estilo para links quando o mouse passa por cima */
+    nav a:hover {
+        text-decoration: underline;
+    }
+  
+    #bot {
+      display: none; /* Ocultar o botão de menu hambúrguer em visualizações maiores */
+    }
+    
+    header h1{
+        font-size: 1em;
+    }
+  
+    main {
+      max-width: 1200px;
+      margin: auto;
+    }
+  
+    figure {
+      display: inline-block;
+      width: 30%;
+      margin: 1.5%;
+    }
+  
+    img {
+      width: 100%;
+    }
+  }
+
+  main h2 {
+    text-align: center; /* Centraliza o texto horizontalmente */
+    margin-top: 20px; /* Adiciona um espaçamento acima do h2 */
+    margin-bottom: 20px; /* Adiciona um espaçamento abaixo do h2 */
+}
+
+figcaption { /* Estilo para centralizar o texto abaixo da imagem */
+    text-align: center;
+    margin-top: 5px; /* Adiciona um pequeno espaçamento entre a imagem e o texto */
+}
+
+
+footer {
+    background-color: #002F5D;
+    color: #fff;
+    padding:0;
+    text-align: center;
+    height: 60px;
+}
