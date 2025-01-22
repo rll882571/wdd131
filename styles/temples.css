@@ -1,114 +1,164 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:wght@100;400&display=swap');
 
 :root {
-
     /* Core Colors */
-    --primary-color:#002F5D; 
-    --secondary-colo: #383434; 
-    --accent1-color: #f0c040; 
-    --accent2-color: #ffa500; 
-    --accent3-color: #f4f4f4; 
-    }
+    --primary-color: #002F5D; /* Azul Escuro */
+    --secondary-color: #383434; /* Cinza Escuro */
+    --accent1-color: #f0c040; /* Amarelo Claro */
+    --accent2-color: #ffa500; /* Laranja */
+    --accent3-color: #f4f4f4; /* Cinza Claro */
+}
 
-    
-        
-    body {
-        font-family: "Your Google Font", sans-serif;
-        margin: 0;
-        padding: 0;
-      }
-      
-      header {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        background-color: #002F5D;
-        font-size: 20px;
-        color: #fff;
-        padding: 10px;
-      }
-      
-      nav ul {
-        display: none; /* Ocultar por padrão em visualizações móveis */
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-      }
-      
-      nav ul li {
-        margin: 5px 0;
-      }
-      
-      nav a {
-        color: #fff;
-        text-decoration: none;
-      }
-      
-      nav a:hover {
-        color: #f8918a;
-        text-decoration: none;
-      }
-      
-      #bot {
-        background: none;
-        border: none;
-        color: #fff;
-        font-size: 24px;
-        cursor: pointer;
-      }
-      
-      .grid {
-        display: grid;
-      }
-      
-      main {
-        padding: 20px;
-      }
-      
-      figure {
-        margin: 10px 0;
-      }
-      
-      img {
-        width: 100%;
-        height: auto;
-      }
-      
-      footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px;
-      
-        clear: both;
-        position: relative;
-        height: 200px;
-        margin-top: 5vh;
-      }
-      
-      .temple-card {
-        border: 1px solid #ccc;
-        padding: 16px;
-        margin: 16px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        text-align: center;
-      }
-      .temple-card img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 8px;
-      }
-      .temple-container {
-        display: flex;
-        flex-direction: column;
-      }
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: "Roboto", serif;
+  background-color: var(--accent3-color); /* Usando o cinza claro para o fundo */
+}
 
-      .hidden {
-        display: none;
-    }
-    
-    .visible {
-        display: flex; /* Or other desired styles for the visible menu */
-    }
+/* Header Section */
+header {
+  background-color: var(--primary-color); /* Azul Escuro */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 15px;
+  color: var(--accent3-color); /* Cor do texto em branco */
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--accent3-color); /* Cor do texto em cinza claro */
+  font-size: 10px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: var(--accent1-color); /* Amarelo Claro */
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--accent3-color); /* Cor das linhas do hamburger em cinza claro */
+}
+
+.navbar-mobile {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  background-color: var(--primary-color); /* Azul Escuro */
+  padding: 10px;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  position: sticky;
+}
+
+.navbar-mobile a {
+  text-align: center;
+  text-decoration: none;
+  color: var(--accent3-color); /* Cor do texto em cinza claro */
+}
+
+.navbar-mobile a:hover {
+  background: var(--accent2-color); /* Cor do texto em cinza claro */
+}
+
+/* Close Button for Mobile Menu */
+.close-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--accent3-color); /* Cor do texto em cinza claro */
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+/* Main Grid Section */
+main { 
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 5px;
+  color: var(--primary-color); /* Título em azul escuro */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+.grid-item {
+  background: var(--accent3-color); /* Fundo em cinza claro */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+.grid-item p {
+  padding: 10px;
+  background: var(--primary-color); /* Fundo azul escuro para o texto */
+  color: var(--accent3-color); /* Cor do texto em cinza claro */
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color); /* Azul Escuro */
+  color: var(--accent3-color); /* Cor do texto em cinza claro */
+  text-align: center;
+  padding: 10px;
+  font-size: 10px;
+  height: 25px;
+}
+
+footer p {
+  padding: 0; /* Ajuste no padding */
+}

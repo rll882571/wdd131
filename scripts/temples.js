@@ -1,28 +1,20 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const bot = document.getElementById("bot"); // Botão do menu
-    const navMenu = document.querySelector("nav ul"); // Menu de navegação
+const hamburger = document.getElementById('hamburger');
+const navbarMobile = document.getElementById('navbar-mobile'); // Alterado para o ID correto
+const closeBtn = document.getElementById('close-btn'); // Alterado para o ID correto
 
-    bot.addEventListener("click", () => {
-        // Alterna a classe 'show' no menu
-        navMenu.classList.toggle("show");
+hamburger.addEventListener('click', () => {
+  navbarMobile.classList.add('open'); // A classe 'open' será adicionada ao navbar-mobile
+});
 
-        // Alterna o ícone do botão
-        bot.textContent = navMenu.classList.contains("show") ? "✖" : "☰";
-    });
-
-    // Garante que o menu seja exibido em telas maiores
-    window.addEventListener("resize", () => {
-        if (window.innerWidth > 768) {
-            navMenu.classList.remove("show"); // Remove a classe 'show'
-            bot.textContent = "☰"; // Restaura o ícone padrão
-        }
-    });
+closeBtn.addEventListener('click', () => {
+  navbarMobile.classList.remove('open'); // A classe 'open' será removida do navbar-mobile
 });
 
 
 
-  
-const currentYear = new Date().getFullYear();
-document.getElementById("currentyear").textContent = currentYear;
-const lastModified = document.lastModified;
-document.getElementById("lastModified").textContent = `Last Modified: ${lastModified}`;
+
+// Atualiza o rodapé com o ano atual
+document.getElementById('currentyear').textContent = new Date().getFullYear();
+
+// Atualiza o rodapé com a data da última modificação
+document.getElementById('lastModified').textContent = "Last Modified: " + document.lastModified;
