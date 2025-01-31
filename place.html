@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortaleza - Brazil</title>
+    <meta name="author" content="Rodrigo Lima">
+    <meta name="description" content="Welcome to my website!">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Fortaleza - Brazil</h1>
+    </header>
+    <main>
+        <!-- Hero Image Section -->
+        <div class="hero">
+            <picture>
+                <!-- WebP image for desktop -->
+                <source srcset="images/img1.webp" media="(min-width: 1000px)">
+                <!-- WebP image for mobile -->
+                <source srcset="images/img1.webp" media="(min-width: 500px)">
+                <!-- Fallback image for browsers that do not support WebP -->
+                <img src="images/img1.webp" alt="Fortaleza">
+            </picture>
+        </div>
+
+        <!-- Data Section -->
+        <div class="data">
+            <section class="data-head">
+                <h2>Data</h2> 
+                <!-- Data details -->
+            </section>
+            <div class="weather-list">
+                <div class="first">
+                    <p>Area: </p>
+                    <p>Population: </p>
+                    <p>Capital: </p>
+                    <p>Languages: </p>
+                    <p>Currency: </p>
+                    <p>Time Zone: </p>
+                    <p>Calling Code: </p>
+                    <p>Internet TLD: </p>
+                </div>
+                <div class="second">
+                    <p>313.8 km²</p>
+                    <p>2.7 million</p>
+                    <p>Fortaleza</p>
+                    <p>Portuguese</p>
+                    <p>Brazilian Real (R$)</p>
+                    <p>UTC-03:00 (BRT)</p>
+                    <p>+55</p>
+                    <p>.br</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Weather Section -->
+        <div class="weather">
+            <section class="weather-head">
+                <h2>Weather</h2> 
+                <span><img src="images/weather-icon.svg" alt="Weather Icon"></span>
+                <!-- Weather details -->
+            </section>
+            <div class="weather-list">
+                <div class="first">
+                    <p>Temperature:</p>
+                    <p>Conditions:</p>
+                    <p>Wind:</p>
+                    <p>Windchill:</p>
+                </div>
+                <div class="second">
+                    <p>28°C</p>
+                    <p>Sunny</p>
+                    <p>15 km/h</p>
+                    <p id="windchill"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span> Rodrigo F. Lima - Fortaleza, Brazil
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
