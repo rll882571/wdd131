@@ -3,7 +3,7 @@
 /* Responsividade */
 @media (max-width: 768px) {
   .grid-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 2fr);
   }
 
   .hamburger {
@@ -46,4 +46,18 @@
     grid-template-columns: 1fr;
   }
   
+}
+
+img{
+  width: 100%;
+  background-color: black;
+  animation: fade 5s;
+}
+@keyframes fade{
+  0%{
+      opacity:0;
+  }
+  100% {
+      opacity: 1;
+  }
 }
