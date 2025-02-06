@@ -1,0 +1,27 @@
+footer {
+    background-color: var(--secondary-color); /* Usando a cor secundária */
+    color: var(--accent3-color); /* Usando a cor de destaque 3 */
+    text-align: center;
+    padding: 30px;
+}
+
+main{
+    margin: 0 auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+img{
+    width: 100%;
+    background-color: black;
+    animation: fade 15s;
+}
+@keyframes fade{
+    0%{
+        opacity:0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
