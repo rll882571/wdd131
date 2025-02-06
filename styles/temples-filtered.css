@@ -116,7 +116,7 @@ h2 {
   
   font-size: 24px;
   color: var(--primary-color); /* Título em azul escuro */
-  border:  1px solid red;
+  
 }
 
 .grid-container {
