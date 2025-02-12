@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{background-color: lightblue;
+        font: normal 20pt Arial;}
+
+    </style>
+</head>
+<body>
+    <h1>olá mundo</h1>
+    <p>já me livrei da maldição</p>
+    <!--como converter de string para numero, se eu quiser um numero r
+    eal eu utilizo a palavra float no lugar de Int. Outra opção é usar só a palavra Number
+    Tambem eu tambem posso converter número para string, utilizando String
+     window.alert("A soma dos valores é: " + String(s))-->
+    <script>
+        //var n1 =Number(window.prompt("Digite um anumero")) // prompt recebe um valor string
+       // var n2 = Number(window.prompt("Digite outro numero"))// prompt recebe um valor string
+        //var s = n1 + n2
+       // window.alert(` A soma entre ${n1} e ${n2} é igual a: ${s}`)
+
+       var nome = window.prompt("Qual seu nome")
+       document.writeln(`Ola, ${nome} ! Seu nome tem ${nome.length} letras.<br/>`)
+       document.writeln(`Seu nome em letras maiusculas é ${nome.toUpperCase()}`)
+    </script>
+</body>
+</html>
