@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:wght@100;400&display=swap');
+:root {
+    /* Core Colors */
+    --primary-color: #383434; /* Cor principal */
+    --secondary-color: #002F5D; /* Cor secundária */
+    --accent1-color: #f0c040; /* Cor de destaque 1 */
+    --accent2-color: #ffa500; /* Cor de destaque 2 */
+    --accent3-color: #f4f4f4; /* Cor de destaque 3 */
+    }
+body {
+    
+    font-family: 'Roboto', sans-serif;
+    
+    }
+
+    
+    header { 
+        display: flex; 
+        flex-direction: column; 
+        color: #fff; 
+        padding: 0;
+        width: 99vw; /* Ocupa toda a largura da viewport */
+        max-width: none; /* Remove qualquer limitação de largura */
+       
+    }
+
+
+header h1 { 
+
+    margin: 0px; 
+    font-size: 25px; 
+    font-family: "Roboto Condensed", serif; 
+    text-align: center; 
+    padding: 15px 30px 10px 15px; 
+    background: linear-gradient(to right, #003366, #0066cc);   
+} 
+	
+	header h1 span { 
+  color: #f0c040;  
+} 
+	
+nav ul { 
+
+    display: flex; 
+    list-style-type: none; 
+    height: 30px; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin: 0; 
+    background:var( --primary-color); 
+} 
+	  nav ul li {  
+    margin-right: 35px; 
+} 
+	
+nav ul li a { 
+    display: block; 
+    text-align: center; 
+    text-decoration: none; 
+    color: #fff; 
+    list-style: none; 
+    padding: 1rem; 
+	font-family: "Roboto Condensed", serif;
+} 
+	nav ul li a:hover { 
+  color:orange; 
+} 
+	
+	main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+    padding: 10px;
+	max-width: 900px;
+	margin:  auto;
+    margin-bottom: 2%;
+}
+
+.card {
+    background-color: #f4f4f4;
+    padding: 0px;
+    border-radius: 15px;
+    overflow: hidden;
+   
+}
+
+.card header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.card h2 {
+    text-align: center;
+    margin-top: 0%;
+    margin-bottom: 5%;
+    padding-top: 0%;
+    padding-left: 0%;
+    padding-right: 0%;
+
+}
+
+.card p {
+    margin-left: 10px;
+    text-align: justify;
+}
+
+.card-one h2{
+    background: linear-gradient(to right, #003366, #0066cc);
+    color: #fff;
+    padding: 10px;
+}
+
+
+.profile {
+    width: 100px;
+    height: auto;
+    border: 1px solid steelblue;
+    padding: 2px;
+    box-shadow: 0 0 30px gray;
+    float: right;
+    margin: 0 0 1rem 1rem;
+    margin-right: 10px;
+	
+}
+hr{
+    margin-top: 5px; /* Espaço entre o título e a linha */
+    margin-bottom: 20px; /* Espaço entre a linha e o próximo elemento */
+    margin-left: 90px;
+    width: 50%; /* Ajuste a largura da linha, se necessário */
+   
+}
+.subsection p{
+    margin: 20px;
+}
+
+
+
+.flag {
+    width: 150px;
+    height: 110px;
+    border: 1px solid green;
+    padding: 2px;
+    box-shadow: 0 0 30px gray;
+    float: left;
+    margin: 0 0 1rem 1rem;
+    margin-right: 10px;
+}
+
+.subsection h3 {
+    position: relative;
+    text-align: center;
+}
+
+.subsection2 {
+    margin-top: 100px;
+}
+.subsection2 ul li a {
+    text-decoration: none;
+    color: steelblue;
+    list-style: none;
+    padding: 1rem;
+}
+
+.subsection2 ul li a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background: linear-gradient(to right, #003366, #0066cc);
+    color: #fff;
+    padding: 2px;
+    text-align: center;
+    height: 60px;
+    
+}
+
+#lastModified{
+    font-size: 10px;
+    margin-top: -15px;
+    color:var(--accent1-color); ;
+}
+
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Estilo para cada slide */
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Mostrar o slide ativo */
+.slide.active {
+    opacity: 1;
+}
+
+/* Estilo para as imagens */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.resources-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.resources-list li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.resources-list li:hover {
+    background-color: #e0e0e0;
+}
+
+.resources-list a {
+    text-decoration: none;
+    color: #0073e6;
+    font-size: 16px;
+    display: block;
+}
+
+.resources-list a:hover {
+    color: #005bb5;
+}
+
+/* Estilos para o formulário de contato */
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para as informações de contato */
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info h3 {
+    margin-bottom: 10px;
+}
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals - Rodrigo Lima</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/website.css">
+    <meta name="description" content="Welcome to my website! Here you'll find resources and educational materials on web development, including the WDD 131 course, covering essential skills for beginner programmers. Explore content on HTML, CSS, JavaScript, and more.">
+    <meta name="author" content="Rodrigo Lima">
+    <meta name="keywords" content=" etc..">
+    <script src="scripts/website.js" defer></script>
+</head>
+<body>
+    <header>
+        <div role="banner" class="container-logo">  <h1><span role="img" aria-label="Aplus English">Aplus English</span></h1> <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="https://byupw.instructure.com/.">About Us</a></li>  <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/2?lang=por">Contact Us</a></li>  <li><a href="#">Login</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    
+        <div class="navbar-mobile" id="navbar-mobile">
+            <button class="close-btn" id="close-btn">X</button>
+            <a href="#">Home</a>
+            <a href="https://byupw.instructure.com/.">About Us</a>  <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/2?lang=por">Contact Us</a>  <a href="#">Login</a>
+        </div>
+    </header>
+    <main>
+        <section class="card">
+            <div class="card-one">
+                <h2>Start your classes now! </h2>
+                <div class="slideshow">
+                    <div class="slide">
+                        <img src="images/all.jpg" alt="Imagem 1">
+                    </div>
+                    <div class="slide">
+                        <img src="images/aplus.jpg" alt="Imagem 2">
+                    </div>
+                    <div class="slide">
+                        <img src="images/c.jpg" alt="Imagem 3">
+                    </div>
+                    <div class="slide">
+                        <img src="images/prep.jpg" alt="Imagem 4">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="card">
+            <div class="card-one">
+                <h2>Year</h2>
+            </div>
+            <div class="content">
+                <ul class="resources-list">
+                    <li><a href="https://dev.to" target="_blank">6th grade</a></li>
+                    <li><a href="https://www.smashingmagazine.com" target="_blank">7th grade</a></li>
+                    <li><a href="https://css-tricks.com" target="_blank">8th grade</a></li>
+                    <li><a href="https://www.w3schools.com" target="_blank">9th grade</a></li>
+                    <li><a href="https://www.udemy.com" target="_blank">High school 1</a></li>
+                    <li><a href="https://picsum.photos" target="_blank">High school 2</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span> Rodrigo F. Lima - Fortaleza, Brazil
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
