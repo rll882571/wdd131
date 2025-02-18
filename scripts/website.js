@@ -1,42 +1,36 @@
-let slides = document.querySelectorAll(".slide");
-let currentSlide = 0;
+// Menu Hamburguer
+const navSlide = () => {
+    const burger = document.getElementById('menu-hamburger');
+    const nav = document.getElementById('menu-principal');
+    const navLinks = document.querySelectorAll('.nav-links li');
 
-function showSlide(index) {
-    // Esconde todos os slides
-    slides.forEach((slide) => {
-        slide.classList.remove("active");
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('nav-active');
+        
+        navLinks.forEach((link, index) => {
+            if (link.style.animation) {
+                link.style.animation = '';
+            } else {
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index/7 + 0.3}s`;
+            }
+        });
+        
+        burger.classList.toggle('toggle');
     });
-
-    // Mostra o slide atual
-    slides[index].classList.add("active");
 }
 
-function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-}
+navSlide();
 
-// Inicia o slideshow
-showSlide(currentSlide);
+// Validação do Formulário
+const form = document.querySelector('form');
+form.addEventListener('submit', (event) => {
+    if (form.name.value === '' || form.email.value === '' || form.message.value === '') {
+        alert('Por favor, preencha todos os campos obrigatórios.');
+        event.preventDefault();
+    }
 
-// Alterna os slides a cada 3 segundos
-setInterval(nextSlide, 3000);
-
-const hamburger = document.getElementById('hamburger');
-const navbarMobile = document.getElementById('navbar-mobile');
-const closeBtn = document.getElementById('close-btn');
-
-hamburger.addEventListener('click', () => {
-  navbarMobile.style.display = 'flex'; // Exibe o menu mobile
-});
-
-closeBtn.addEventListener('click', () => {
-  navbarMobile.style.display = 'none'; // Esconde o menu mobile
-});
-
-// Opcional: Esconde o menu mobile se o usuário clicar fora dele
-navbarMobile.addEventListener('click', (event) => {
-  if (event.target === navbarMobile) {
-    navbarMobile.style.display = 'none';
-  }
+    if (!form.email.value.includes('@')) {
+        alert('Por favor, digite um email válido.');
+        event.preventDefault();
+    }
 });
