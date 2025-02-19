@@ -1,4 +1,4 @@
- css: @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:wght@100;400&display=swap');
 
 :root {
     /* Core Colors */
@@ -60,93 +60,28 @@ nav ul li a:hover {
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;  /* Centraliza o conteúdo horizontalmente */
-    padding: 20px;
-    max-width: 900px;
-    margin: 20px auto;
+  display: grid;
+  padding: 50px;
+  grid-template-columns: 2fr 1fr;
 }
 
+ 
 .card {
     background-color: #f4f4f4;
-    padding: 20px; /* Adiciona padding interno */
-    border-radius: 15px;
-    overflow: hidden;
-    width: 100%; /* Ocupa a largura total do main */
-    box-sizing: border-box; /* Inclui padding e borda na largura */
+    width: 50%;
+    
 }
 
 .card-one {
     background: linear-gradient(to right, #003366, #0066cc);
     color: #fff;
-    padding: 10px;
+    padding: 0px;
     text-align: center; /* Centraliza o título */
-    margin-bottom: 20px; /* Espaço abaixo do título */
 }
 
 .card h2 {
     margin: 0; /* Remove margens padrão */
-}
-
-.content {
-    /* Não precisa de estilos específicos, o card já tem padding */
-}
-
-.contact-info {
-    margin-top: 20px;
-    text-align: center; /* Centraliza as informações */
-}
-
-.contact-info h3 {
-    margin-bottom: 10px;
-}
-
-.contact-info p {
-    margin: 5px 0; /* Espaçamento entre os parágrafos */
-}
-
-/* Estilos para o formulário */
-form {
-    display: flex;
-    flex-direction: column; /* Alinha os elementos verticalmente */
-    width: 100%; /* Ocupa a largura total do card */
-}
-
-label {
-    margin-bottom: 5px;
-    font-weight: bold; /* Rótulos em negrito */
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box; /* Inclui padding e borda na largura */
-}
-
-textarea {
-    resize: vertical; /* Permite redimensionar a altura */
-}
-
-input[type="submit"] {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: auto; /* Largura automática */
-    align-self: center; /* Centraliza o botão */
-}
-
-input[type="submit"]:hover {
-    background-color: #0056b3;
+  
 }
 
 footer {
@@ -157,26 +92,103 @@ footer {
     height: auto;
 }
 
+.anos-escolares {
+  background-color: #f0f0f0; /* Cor de fundo da seção */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+  height: 120px;
+}
+
+.anos-escolares h2 {
+  color: black; /* Cor do título */
+  text-align: center; /* Título centralizado */
+ 
+}
+
+.anos-escolares ul {
+  list-style: none; /* Remove os marcadores de lista */
+  padding: 0; /* Remove o preenchimento da lista */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;/* Alinha os itens horizontalmente */
+  justify-content: space-around; /* Distribui os itens uniformemente */
+}
+
+.anos-escolares li a {
+  display: flex; /* Transforma o link em um bloco */
+  padding: 10px 20px; /* Espaçamento interno do link */
+  background-color: #fff; /* Cor de fundo do link */
+  color: #333; /* Cor do texto do link */
+  text-decoration: none; /* Remove o sublinhado do link */
+  border-radius: 5px; /* Bordas arredondadas do link */
+  transition: background-color 0.3s ease; /* Transição suave na mudança de cor */
+}
+
+.anos-escolares li a:hover {
+  background-color: #ddd; /* Cor de fundo do link ao passar o mouse */
+}
+
+
 #lastModified {
     font-size: 10px;
     margin-top: 10px;
     color: var(--accent1-color);
 }
 
+.slideshow-container {
+            position: relative;
+            max-width: 900px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        .slide img {
+    width: 120%;
+    height: 450px; 
+    object-fit: cover; /* Garante que as imagens sejam cortadas para se ajustar ao espaço sem distorção */
+    border-radius: 10px;
+}
+
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .prev { left: 10px; }
+        .next { right: 10px; }
+
+
 /* Media queries para responsividade */
 @media (max-width: 768px) {
     main {
-        padding: 10px; /* Ajusta o padding em telas menores */
-    }
+    display: flex;
+    flex-direction: column;
+     
+}
 
     .card {
-        padding: 15px; /* Ajusta o padding do card */
-    }
+    backgrond-color: #f4f4f4;
+    width: 60%; /* Reduz a largura para 80% do main */
+     align-items: right;
+  
+}
 
     nav ul {
         flex-direction: column; /* Menu em coluna */
         align-items: flex-start; /* Alinha os itens à esquerda */
         height: auto; /* Altura automática */
+      
     }
 
     nav li {
@@ -188,11 +200,135 @@ nav1 {
  cor de fundo : #222831 ; 
  cor : #fff ; 
 }
+
 .checkbtn { 
  tamanho da fonte : 1.5rem ; 
  cor : branco; 
  cursor : ponteiro; 
 }
+
 .nav-mobile { 
- display : nenhum; 
+ display : none; 
+}
+
+@media (max-width: 768px) {
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background: linear-gradient(to right, #003366, #0066cc);
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 0 2rem;
+}
+
+.logo h1 {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 25px;
+    margin: 0;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 12px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent1-color);
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        width: 60%;
+    }
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 60vh;
+        top: 8vh;
+        background: linear-gradient(to right, #003366, #0066cc);
+        display: flex;
+        flex-direction: column;
+        width: 18%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        padding: 10px 0;
+       
+    }
+    
+    .nav-links li {
+        opacity: 0;
+        margin: 10px 0;
+    }
+    
+    .burger {
+        display: block;
+    }
+  .slide img {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover; /* Garante que as imagens sejam cortadas para se ajustar ao espaço sem distorção */
+    border-radius: 10px;
+}
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
 }
