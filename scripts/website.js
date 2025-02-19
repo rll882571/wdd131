@@ -20,17 +20,19 @@ const navSlide = () => {
 }
 
 navSlide();
+ let slideIndex = 0;
+        showSlides(slideIndex);
 
-// Validação do Formulário
-const form = document.querySelector('form');
-form.addEventListener('submit', (event) => {
-    if (form.name.value === '' || form.email.value === '' || form.message.value === '') {
-        alert('Por favor, preencha todos os campos obrigatórios.');
-        event.preventDefault();
-    }
+        function changeSlide(n) {
+            showSlides(slideIndex += n);
+        }
 
-    if (!form.email.value.includes('@')) {
-        alert('Por favor, digite um email válido.');
-        event.preventDefault();
-    }
-});
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("slide");
+            if (n >= slides.length) { slideIndex = 0; }
+            if (n < 0) { slideIndex = slides.length - 1; }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex].style.display = "block";
+        }
