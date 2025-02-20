@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/website.css">
+    <meta name="description" content="Welcome to my website! Here you'll find resources and educational materials on web development, including the WDD 131 course, covering essential skills for beginner programmers. Explore content on HTML, CSS, JavaScript, and more.">
+    <meta name="author" content="Rodrigo Lima">
+    <meta name="keywords" content=" etc..">
+    <script src="scripts/website.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Aplus English</h1>
+            </div>
+    
+            <ul class="nav-links" id="menu-principal">
+                <li><a href="website.html">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="signup.html">Sign up</a></li>
+            </ul>
+            
+            <!-- Botão Hamburger -->
+            <div class="burger" id="menu-hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="card">
+            <div class="card-one">
+                <h2>Start your classes now! </h2>
+                <div class="slideshow-container">
+                    <div class="slide">
+                        <img src="images/all.jpg" loading="lazy" alt="Imagem 1">
+                    </div>
+                    <div class="slide">
+                        <img src="images/aplus.jpg" loading="lazy" alt="Imagem 2">
+                    </div>
+                    <div class="slide">
+                        <img src="images/c.jpg" loading="lazy" alt="Imagem 3">
+                    </div>
+                    <div class="slide">
+                        <img src="images/english.jpg" loading="lazy" alt="Imagem 4">
+                    </div>
+                    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+                </div>
+            </div>
+        </section>
+        <section class="anos-escolares">
+            <h2>Ensino Fundamental</h2>
+            <ul>
+                <li><a href="#">5º Ano</a></li>
+                <li><a href="#">6º Ano</a></li>
+                <li><a href="#">7º Ano</a></li>
+                <li><a href="#">8º Ano</a></li>
+                <li><a href="#">9º Ano</a></li>
+                <li><a href="#">1º Ano</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span> Rodrigo F. Lima - Fortaleza, Brazil
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
