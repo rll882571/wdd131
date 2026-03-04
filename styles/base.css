@@ -1,7 +1,8 @@
 
 :root {
-    --primary-color: #57c0f1;  
+    --primary-color: #a8d8a6;  
     --nav-color: #343434;
+    --nav-color-text: #F5F5F5;
     --background-color: #F5F5F5;
     --mainHeader-font-family: 'Raleway', sans-serif;
     --nav-font-family: 'Raleway', sans-serif;
@@ -25,8 +26,30 @@ body{
 header{
    display: flex;
    flex-direction: column;
+   padding: 1rem;
+   
 }
-.course-title{
-    font-family: var(--mainHeader-font-family);
 
+ header h1{
+    background-color: var(--primary-color);
+    font-family: var(--mainHeader-font-family);
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--nav-color-text);
+
+}
+
+nav{
+  
+  text-align: center;
+  background-color: #080808;
+  justify-content: space-evenly;/*Alinha os itens de navegação à direita do container.*/
+  display: flex;/*Usa o layout flexível para organizar os itens de navegação em linha.*/
+  
+  
+}
+
+nav a{
+    text-decoration: none;/*Remove o sublinhado dos links de navegação.*/
+    color: var(--background-color);
 }
