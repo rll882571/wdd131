@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Raleway:wght@600;700&display=swap');
+:root {
+    --primary-color: #57c0f1;  
+    --nav-color: #343434;
+    --background-color: #F5F5F5;
+    --mainHeader-font-family: 'Raleway', sans-serif;
+    --nav-font-family: 'Raleway', sans-serif;
+    --student-name-font-family: 'Raleway', sans-serif;
+    --card-title-font-family: 'Raleway', sans-serif;
+    --paragraph-font-family: 'Lato', sans-serif; 
+    --link-font-family: 'Lato', sans-serif;
+    --footer-font-family: 'Lato', sans-serif;
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background-color: var(--background-color);
+    max-width: 980px;
+    margin:  auto;
+}
+header{
+   display: flex;
+   flex-direction: column;
+}
+.course-title{
+    font-family: var(--mainHeader-font-family);
+
+}
