@@ -1,6 +1,6 @@
 
 :root {
-    --primary-color: #a8d8a6;  
+    --primary-color: #2EC0F9;  
     --nav-color: #343434;
     --nav-color-text: #F5F5F5;
     --background-color: #F5F5F5;
@@ -35,7 +35,7 @@ header{
     font-family: var(--mainHeader-font-family);
     font-size: 1.5rem;
     text-align: center;
-    color: var(--nav-color-text);
+    color: blue);
 
 }
 
