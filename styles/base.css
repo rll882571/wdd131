@@ -30,7 +30,7 @@ header{
    
 }
 
- header h1{
+ header h2{
     background-color: var(--primary-color);
     font-family: var(--mainHeader-font-family);
     font-size: 1.5rem;
