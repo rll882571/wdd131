@@ -1,7 +1,7 @@
 
 :root {
     --primary-color: #2EC0F9;  
-    --nav-color: #343434;
+    --nav-color: #080808;
     --nav-color-text: #F5F5F5;
     --background-color: #F5F5F5;
     --mainHeader-font-family: 'Raleway', sans-serif;
@@ -35,23 +35,18 @@ header{
     font-family: var(--mainHeader-font-family);
     font-size: 1.5rem;
     text-align: center;
-    color: black;
     padding: 0.5rem;
-    color: black;
-    padding: 0.5rem;
+    color: var(--nav-color);
 
 }
 
 nav{
   
   text-align: center;
-  background-color: #080808;
+  background-color: var(--nav-color);
   justify-content: space-evenly;/*Alinha os itens de navegação à direita do container.*/
   display: flex;/*Usa o layout flexível para organizar os itens de navegação em linha.*/
   padding: 0.2rem;
-  padding: 0.2rem;
-  
-  
 }
 
 nav a{
@@ -85,7 +80,7 @@ main h2{
     
 }
 .card{
-    background-color: white;   
+    background-color: var(--background-color);   
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
@@ -120,7 +115,7 @@ footer{
     grid-template-columns: 1fr;
 
     background-color: var(--primary-color);
-    color: black;
+    color: var(--nav-color);
     text-align: center;
     padding: 1rem;
     font-family: var(--footer-font-family);
