@@ -21,7 +21,6 @@
 body{
     background-color: var(--background-color);
     max-width: 1000px;
-    max-width: 1000px;
     margin:  auto;
 }
 header{
@@ -121,14 +120,16 @@ section ul {
     text-align: center;
 }
 #card1-2{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    display:flex;
 }
-.card img {
-    margin: 1rem;
+#card1-2 img{
+    border-radius: 5px;
     
 }
 footer{
+    display: grid;
+    grid-template-columns: 1fr;
+
     background-color: var(--primary-color);
     color: black;
     text-align: center;
@@ -137,6 +138,6 @@ footer{
 }
 #lastModified{
     font-size: 10px;
-    margin-top: -15px;
+   
     color:var(--accent1-color); ;
 }
