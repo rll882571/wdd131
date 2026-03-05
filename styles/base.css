@@ -21,6 +21,7 @@
 body{
     background-color: var(--background-color);
     max-width: 1000px;
+    max-width: 1000px;
     margin:  auto;
 }
 header{
@@ -37,6 +38,8 @@ header{
     text-align: center;
     color: black;
     padding: 0.5rem;
+    color: black;
+    padding: 0.5rem;
 
 }
 
@@ -46,6 +49,7 @@ nav{
   background-color: #080808;
   justify-content: space-evenly;/*Alinha os itens de navegação à direita do container.*/
   display: flex;/*Usa o layout flexível para organizar os itens de navegação em linha.*/
+  padding: 0.2rem;
   padding: 0.2rem;
   
   
