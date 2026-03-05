@@ -103,29 +103,18 @@ section ul {
    padding: 2rem;
     
 }
-#card1 {
+#card1{
     display: grid;
     grid-template-columns: 2fr 1fr;
-    
+    gap: 15px;
 }
-#card1 h2 {
+#card1 h2,
+#card1 h3,
+#card1 hr{
     grid-column: 1 / -1;
+}
 
-}
-#card1 hr {
-    grid-column: 1 / -1;
-}
-#card1 h3 {
-    grid-column: 1 / -1;
-    text-align: center;
-}
-#card1-2{
-    display:flex;
-}
-#card1-2 img{
-    border-radius: 5px;
     
-}
 footer{
     display: grid;
     grid-template-columns: 1fr;
