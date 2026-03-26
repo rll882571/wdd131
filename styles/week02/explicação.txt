@@ -1,0 +1,18 @@
+for (let i = 1; i <= 5; i++) { console.log("Volta número: " + i); }
+
+for -- declara que é uma repetição
+
+( ) -- Contêiner de Controle Na gramática do JavaScript, tudo o que fica dentro dos parênteses do for define as regras do jogo. Eles "guardam" a configuração da repetição.
+
+let --Declarar uma Variável. O let avisa ao JavaScript: "Ei, reserve um espaço na memória porque eu vou guardar um valor aqui e esse valor pode mudar depois
+
+i -- o nome da caixa
+
+i <= 5 → Pergunta: "O valor de i É MENOR OU IGUAL a 5?"
+
+i++ Operador de Incremento. Pegue o que está dentro da caixa i, some mais 1 e guarde o resultado na mesma caixa.
+
+
+{ } servem para agrupar tudo o que você quer que o computador repita
+
+let i = 1; while (i <= 5) {console.log("Número: " + i); i++;}

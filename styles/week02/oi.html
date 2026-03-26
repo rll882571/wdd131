@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Contador Visual</title>
+    
+    <style>
+        /* CSS: O "Estilo" ou "Roupa" da página */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f2f5;
+        }
+
+        #container {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .card {
+            background-color: #4a90e2;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 100px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.1);
+            background-color: #357abd;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Minha Fábrica de Cards</h1>
+    <p>O JavaScript usou um <strong>for</strong> para criar isso abaixo:</p>
+
+    <div id="container"></div>
+
+    <script>
+        // SCRIPT: A "Lógica" ou o "Cérebro"
+        const container = document.getElementById('container');
+
+        // O nosso famoso FOR!
+        // Começa no 1; Vai até o 5; Aumenta de 1 em 1
+        for (let i = 1; i <= 10; i++) {
+            
+            // 1. Criamos um novo elemento "div" na memória
+            const novoCard = document.createElement('div');
+            
+            // 2. Damos a classe CSS "card" para ele ficar bonito
+            novoCard.classList.add('card');
+            
+            // 3. Colocamos o texto usando a variável "i" (o número da volta)
+            novoCard.textContent = "Card nº " + i;
+            
+            // 4. Jogamos esse card novo dentro do nosso container no HTML
+            container.appendChild(novoCard);
+            
+            console.log("Acabei de fabricar o card: " + i);
+        }
+    </script>
+
+</body>
+</html>

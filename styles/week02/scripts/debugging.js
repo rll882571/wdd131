@@ -22,9 +22,12 @@ areaOutput.textContent = area;
 
 const circuloOutput = document.getElementById('circulo');
 
-if (radius > 15) {
-    circuloOutput.textContent = 'Grande';
+if (radius > 25) {
+    circuloOutput.textContent = 'Muito Grande';
 
+}
+else if (radius > 15){
+    circuloOutput.textContent = 'Médio';
 }
 else {
     circuloOutput.textContent = 'Pequeno';
