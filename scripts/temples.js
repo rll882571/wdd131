@@ -18,3 +18,4 @@ hamburger.addEventListener('click', () => {
 closeBtn.addEventListener('click', () => {
     mobileMenu.classList.remove('open');
 });
+
