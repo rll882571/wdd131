@@ -110,7 +110,7 @@ function displayTemples(filteredTemples) {
             <p><span>Location:</span> ${temple.location}</p>
             <p><span>Dedicated:</span> ${temple.dedicated}</p>
             <p><span>Size:</span> ${temple.area.toLocaleString()} sq ft</p>
-            <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
+            <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy" width="400" height="250">
         `;
 
         container.appendChild(card);
