@@ -17,34 +17,28 @@
         <h1>Fortaleza - Brazil</h1>
     </header>
     <main>
-        <!-- Hero Image Section -->
         <div class="hero">
             <picture>
-                <!-- WebP image for desktop -->
                 <source srcset="images/fortaleza-02.webp" media="(min-width: 1000px)">
-                <!-- WebP image for mobile -->
                 <source srcset="images/fortaleza-01.webp" media="(min-width: 500px)">
-                <!-- Fallback image for browsers that do not support WebP -->
-                <img src="images/fortaleza-01.webp" alt="Fortaleza" fetchpriority="high">
+                <img src="images/fortaleza-01.webp" alt="Fortaleza shoreline" fetchpriority="high">
             </picture>
         </div>
 
-        <!-- Data Section -->
         <div class="data">
             <section class="data-head">
                 <h2>Data</h2> 
-                <!-- Data details -->
             </section>
             <div class="weather-list">
                 <div class="first">
-                    <p>Area: </p>
-                    <p>Population: </p>
-                    <p>Capital: </p>
-                    <p>Languages: </p>
-                    <p>Currency: </p>
-                    <p>Time Zone: </p>
-                    <p>Calling Code: </p>
-                    <p>Internet TLD: </p>
+                    <p>Area:</p>
+                    <p>Population:</p>
+                    <p>Capital:</p>
+                    <p>Languages:</p>
+                    <p>Currency:</p>
+                    <p>Time Zone:</p>
+                    <p>Calling Code:</p>
+                    <p>Internet TLD:</p>
                 </div>
                 <div class="second">
                     <p>313.8 km²</p>
@@ -59,12 +53,10 @@
             </div>
         </div>
 
-        <!-- Weather Section -->
         <div class="weather">
             <section class="weather-head">
-                <h2>Weather</h2> 
+                <h2 class="weather-title">Weather</h2> 
                 <span><img src="images/weather-icon.svg" alt="Weather Icon"></span>
-                <!-- Weather details -->
             </section>
             <div class="weather-list">
                 <div class="first">
@@ -74,16 +66,15 @@
                     <p>Windchill:</p>
                 </div>
                 <div class="second">
-                    <p>28°C</p>
+                    <p>5°C</p>
                     <p>Sunny</p>
-                    <p>15 km/h</p>
+                    <p>10 km/h</p>
                     <p id="windchill"></p>
                 </div>
             </div>
         </div>
     </main>
 
-    <!-- Footer Section -->
     <footer>
         <p>
             &copy; <span id="currentyear"></span> Rodrigo F. Lima - Fortaleza, Brazil

@@ -1,12 +1,13 @@
 :root {
-    /* Core Colors - Baseadas nos exemplos fornecidos */
-    --primary-color: #002F5D;   /* Azul escuro (era #383434) */
-    --secondary-color: #383434; /* Cinza escuro (era #ea0014) */
-    --accent1-color: #f0c040;   /* Dourado (era #ce3e3e) */
-    --accent2-color: #ffa500;   /* Laranja (era rgba(254,193,142,255)) */
-    --accent3-color: #f4f4f4;   /* Cinza claro/Off-white */
+    /* Core Colors */
+    --primary-color: #002F5D;   /* Azul escuro */
+    --secondary-color: #383434; /* Cinza escuro */
+    --accent1-color: #f0c040;   /* Dourado */
+    --accent2-color: #ffa500;   /* Laranja */
+    --accent3-color: #f4f4f4;   /* Off-white */
 }
 
+/* Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -14,86 +15,64 @@
 }
 
 body {
-    font-family: Arial, sans-serif; /* Você pode mudar para 'Roboto' se quiser total fidelidade ao exemplo */
-    margin: 0;
-    padding: 0;
+    font-family: 'Roboto', Arial, sans-serif;
     background-color: var(--accent3-color);
+    color: var(--secondary-color);
+    line-height: 1.6;
 }
 
-/* Hero section styles */
-.hero img {
-    width: 100%;
-    height: 700px;
-    object-fit: cover;
-}
-
-/* Header styles */
+/* Header */
 header {
     padding: 20px;
-    background-color: var(--primary-color); /* Alterado para o Azul Escuro */
+    background-color: var(--primary-color);
+    color: var(--accent3-color);
+    text-align: center;
 }
 
 h1 {
-    color: var(--accent3-color); 
-    text-align: center;
+    font-size: 1.8rem;
 }
 
-/* Data section styles */
-.data {
+/* Hero Section (Critério 4) */
+.hero img {
+    width: 100%;
+    display: block;
+    object-fit: cover; /* Mantém a proporção sem distorcer a imagem */
+}
+
+/* Cards (Data & Weather) */
+.data, .weather {
     display: flex;
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.9); 
-    color: var(--secondary-color); /* Texto em cinza escuro */
-    align-items: center;
+    margin: 20px auto;
+    max-width: 400px;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.data-head, .weather-head {
+    background-color: var(--primary-color);
+    padding: 10px;
     text-align: center;
 }
 
-.data-head {
-    align-items: center;
-    background-color: var(--primary-color); /* Fundo do título em Azul */
-    padding: 10px;
-}
-
-.data-head h2 {
-    color: var(--accent3-color); /* Texto do título em claro para contraste */
-}
-
-.data p {
-    color: var(--secondary-color);
-}
-
-/* Weather section styles */
-.weather {
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.9); 
-    color: var(--secondary-color);
-    align-items: center;
-    text-align: center;
-}
-
-.weather-head {
-    align-items: center;
-    background-color: var(--primary-color); /* Fundo do título em Azul */
-    padding: 10px;
-}
-
-.weather-head h2 {
+.data-head h2, .weather-head h2 {
     color: var(--accent3-color);
+    font-size: 1.4rem;
 }
 
 .weather img {
-    width: 80px;
-    margin-left: 5px;
+    width: 60px;
+    margin-top: 10px;
 }
 
-.weather p {
-    color: var(--secondary-color);
-}
-
+/* List Styling (Critério 8 - Alinhamento e Proximidade) */
 .weather-list {
     display: flex;
-    align-items: center;
+    padding: 20px;
+    justify-content: center;
+    gap: 20px;
 }
 
 .first {
@@ -103,76 +82,75 @@ h1 {
 
 .second {
     text-align: left;
-    margin-left: 5px;
 }
 
-/* Footer styles */
+.first p, .second p {
+    margin-bottom: 5px;
+}
+
+/* Footer */
 footer {
-    background-color: var(--primary-color); /* Alterado para Azul Escuro */
+    background-color: var(--primary-color);
     color: var(--accent3-color); 
     text-align: center;
-    padding: 30px;
+    padding: 2rem;
+    margin-top: 20px;
 }
 
-/* Media Queries */
-@media (max-width: 762px) {
+/* --- Media Queries --- */
+
+/* Mobile View (Abaixo de 769px) */
+@media (max-width: 769px) {
     .hero img {
-        width: 100%;
-        height: 500px;
-        object-fit: cover;
+        height: 500px; /* Imagem esticada verticalmente conforme solicitado */
     }
 
     .data, .weather {
-        background-color: rgba(255, 255, 255, 0.9); 
-        color: var(--secondary-color);
-    }
-
-    h2 {
-        color: var(--primary-color);
-    }
-
-    .data p, .weather p {
-        color: var(--secondary-color);
+        margin-top: 15px; /* Mantém os cards próximos da imagem */
     }
 }
 
+/* Desktop View (770px e acima) */
 @media (min-width: 770px) {
-    .data {
-        position: absolute;
-        top: 45%;
-        left: 18%;
-        transform: translate(-50%, -50%);
-        background-color: rgba(255, 255, 255, 0.9); 
-        color: var(--secondary-color);
-        padding: 10px 30px 10px;
+    main {
+        position: relative;
     }
 
-    /* Removi a cor de fundo aqui para manter o visual limpo, 
-       mas se quiser o cabeçalho colorido: */
-    .data-head {
-        background-color: var(--primary-color);
+    .hero img {
+        height: 600px; /* Altura para desktop */
+    }
+
+    /* Posicionamento dos Cards sobre a Hero Image */
+    .data {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        width: 300px;
+        margin: 0;
     }
 
     .weather {
         position: absolute;
-        top: 70%;
-        right: 2%;
-        transform: translate(-50%, -50%);
-        background-color: rgba(255, 255, 255, 0.9); 
-        color: var(--secondary-color);
-        padding: 10px 30px 10px;
+        top: 40px;
+        right: 40px;
+        width: 300px;
+        margin: 0;
     }
 
-    .weather-head {
-        background-color: var(--primary-color);
+    /* Critério 6: Pseudo-element Emoticon (Apenas no desktop) */
+    .weather-title::after {
+        content: " 🌤️";
+        font-size: 1.2rem;
+        vertical-align: middle;
     }
-}
 
-.data-head h2::after {
-    content: "";
-    display: block;
-    width: 50%;
-    height: 2px;
-    background-color: var(--accent1-color); /* Linha em Dourado */
-    margin: 10px auto;
+    /* Repetição de Design (Linha Dourada) */
+    .data-head h2::after {
+        content: "";
+        display: block;
+        width: 50%;
+        height: 2px;
+        background-color: var(--accent1-color);
+        margin: 8px auto 0;
+    }
 }
