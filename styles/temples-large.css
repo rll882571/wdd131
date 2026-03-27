@@ -70,5 +70,8 @@ header {
     .hamburger {
         display: none; /* Garante que o ícone suma no desktop */
     }
+    .navbar a {
+      display: flex;
+    }
 
 }
