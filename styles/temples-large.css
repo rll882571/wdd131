@@ -54,4 +54,10 @@ main {
 .hamburger {
     display: none;
 }
+.navbar{
+  display: flex;
+}
+.active {
+  border-bottom: 1px solid var(--accent3-color);
+}
 }
