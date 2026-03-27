@@ -155,7 +155,7 @@ footer {
 
     .weather {
         position: absolute;
-        top: 80%;
+        top: 70%;
         right: 2%;
         transform: translate(-50%, -50%);
         background-color: rgba(255, 255, 255, 0.9); 
