@@ -32,9 +32,9 @@ main {
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 20px;
     color: var(--primary-color);
-    border: 1px solid red;
+    
 }
 
 /* --- Cabeçalho (Header) --- */
@@ -44,13 +44,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
     top: 0;
+    
 }
 
 header h1 {
     margin: 0;
-    font-size: 15px;
+    font-size: 25px;
     color: var(--accent3-color);
 }
 
@@ -90,14 +90,11 @@ header h1 {
 .navbar-mobile {
     display: none;
     flex-direction: column;
-    gap: 20px;
-    background-color: var(--primary-color);
     padding: 10px;
     top: 60px;
-    right: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     position: sticky;
+    
 }
 
 .navbar-mobile.open {
@@ -108,6 +105,8 @@ header h1 {
     text-align: center;
     text-decoration: none;
     color: var(--accent3-color);
+    border: 1px solid var(--accent3-color);
+    background-color: var(--primary-color);
 }
 
 .close-btn {
@@ -116,7 +115,7 @@ header h1 {
     border: none;
     font-size: 16px;
     font-weight: bold;
-    color: var(--accent3-color);
+    color: var(--primary-color);
     align-self: flex-end;
     cursor: pointer;
 }
@@ -146,4 +145,12 @@ footer {
 
 footer p {
     padding: 0;
+}
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+figcaption {
+    text-align: center;
 }
