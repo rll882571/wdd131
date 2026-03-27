@@ -1,0 +1,149 @@
+/* ================================================================
+   PROJETO: ESTILO GLOBAL E COMPONENTES
+   DESCRIÇÃO: Estrutura de cores, tipografia e layout responsivo
+================================================================ 
+*/
+
+/* --- Importação de Fontes --- */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:wght@100;400&display=swap');
+
+/* --- Variáveis de Raiz (Cores) --- */
+:root {
+    --primary-color: #002F5D;   /* Azul Escuro */
+    --secondary-color: #383434; /* Cinza Escuro */
+    --accent1-color: #f0c040;   /* Amarelo Claro */
+    --accent2-color: #ffa500;   /* Laranja */
+    --accent3-color: #f4f4f4;   /* Cinza Claro */
+}
+
+/* --- Estilos Globais --- */
+body {
+    margin: 0;
+    font-family: "Roboto", serif;
+    background-color: var(--accent3-color);
+}
+
+main {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    font-size: 24px;
+    color: var(--primary-color);
+    border: 1px solid red;
+}
+
+/* --- Cabeçalho (Header) --- */
+header {
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 15px;
+    color: var(--accent3-color);
+}
+
+/* --- Navegação (Navbar) --- */
+.navbar {
+    display: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--accent3-color); 
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: var(--accent2-color);
+    color: #fff;
+}
+
+/* --- Menu Mobile e Hamburger --- */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--accent3-color);
+}
+
+.navbar-mobile {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--primary-color);
+    padding: 10px;
+    top: 60px;
+    right: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    position: sticky;
+}
+
+.navbar-mobile.open {
+    display: flex;
+}
+
+.navbar-mobile a {
+    text-align: center;
+    text-decoration: none;
+    color: var(--accent3-color);
+}
+
+.close-btn {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--accent3-color);
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+/* --- Layout de Grid --- */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.grid-item p {
+    padding: 10px;
+    background: var(--primary-color); 
+    color: var(--accent3-color); 
+    font-weight: bold;
+}
+
+/* --- Rodapé (Footer) --- */
+footer {
+    background-color: var(--primary-color);
+    color: var(--accent3-color);
+    text-align: center;
+    padding: 10px;
+    font-size: 10px;
+    height: 35px;
+}
+
+footer p {
+    padding: 0;
+}
