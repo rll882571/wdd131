@@ -1,10 +1,10 @@
 :root {
-    /* Core Colors */
-    --primary-color: #383434; /* Cor principal */
-    --secondary-color: #ea0014; /* Cor secundária */
-    --accent1-color: #ce3e3e; /* Cor de destaque 1 */
-    --accent2-color: rgba(254,193,142,255); /* Cor de destaque 2 */
-    --accent3-color: #f4f4f4; /* Cor de destaque 3 */
+    /* Core Colors - Baseadas nos exemplos fornecidos */
+    --primary-color: #002F5D;   /* Azul escuro (era #383434) */
+    --secondary-color: #383434; /* Cinza escuro (era #ea0014) */
+    --accent1-color: #f0c040;   /* Dourado (era #ce3e3e) */
+    --accent2-color: #ffa500;   /* Laranja (era rgba(254,193,142,255)) */
+    --accent3-color: #f4f4f4;   /* Cinza claro/Off-white */
 }
 
 * {
@@ -14,9 +14,10 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* Você pode mudar para 'Roboto' se quiser total fidelidade ao exemplo */
     margin: 0;
     padding: 0;
+    background-color: var(--accent3-color);
 }
 
 /* Hero section styles */
@@ -29,11 +30,11 @@ body {
 /* Header styles */
 header {
     padding: 20px;
-    background-color: var(--secondary-color); /* Usando a cor secundária */
+    background-color: var(--primary-color); /* Alterado para o Azul Escuro */
 }
 
 h1 {
-    color: var(--accent3-color); /* Usando a cor de destaque 3 */
+    color: var(--accent3-color); 
     text-align: center;
 }
 
@@ -42,19 +43,23 @@ h1 {
     display: flex;
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.9); 
-    color: var(--primary-color); /* Usando a cor principal */
+    color: var(--secondary-color); /* Texto em cinza escuro */
     align-items: center;
     text-align: center;
 }
 
 .data-head {
     align-items: center;
-    background-color: var(--accent1-color); /* Usando a cor de destaque 1 */
+    background-color: var(--primary-color); /* Fundo do título em Azul */
     padding: 10px;
 }
 
+.data-head h2 {
+    color: var(--accent3-color); /* Texto do título em claro para contraste */
+}
+
 .data p {
-    color: var(--primary-color); /* Usando a cor principal */
+    color: var(--secondary-color);
 }
 
 /* Weather section styles */
@@ -62,15 +67,19 @@ h1 {
     display: flex;
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.9); 
-    color: var(--primary-color); /* Usando a cor principal */
+    color: var(--secondary-color);
     align-items: center;
     text-align: center;
 }
 
 .weather-head {
     align-items: center;
-    background-color: var(--accent1-color); /* Usando a cor de destaque 1 */
+    background-color: var(--primary-color); /* Fundo do título em Azul */
     padding: 10px;
+}
+
+.weather-head h2 {
+    color: var(--accent3-color);
 }
 
 .weather img {
@@ -79,7 +88,7 @@ h1 {
 }
 
 .weather p {
-    color: var(--primary-color); /* Usando a cor principal */
+    color: var(--secondary-color);
 }
 
 .weather-list {
@@ -99,8 +108,8 @@ h1 {
 
 /* Footer styles */
 footer {
-    background-color: var(--secondary-color); /* Usando a cor secundária */
-    color: var(--accent3-color); /* Usando a cor de destaque 3 */
+    background-color: var(--primary-color); /* Alterado para Azul Escuro */
+    color: var(--accent3-color); 
     text-align: center;
     padding: 30px;
 }
@@ -115,15 +124,15 @@ footer {
 
     .data, .weather {
         background-color: rgba(255, 255, 255, 0.9); 
-        color: var(--primary-color); /* Usando a cor principal */
+        color: var(--secondary-color);
     }
 
     h2 {
-        color: var(--primary-color); /* Usando a cor principal */
+        color: var(--primary-color);
     }
 
     .data p, .weather p {
-        color: var(--primary-color); /* Usando a cor principal */
+        color: var(--secondary-color);
     }
 }
 
@@ -134,12 +143,14 @@ footer {
         left: 18%;
         transform: translate(-50%, -50%);
         background-color: rgba(255, 255, 255, 0.9); 
-        color: var(--primary-color); /* Usando a cor principal */
+        color: var(--secondary-color);
         padding: 10px 30px 10px;
     }
 
+    /* Removi a cor de fundo aqui para manter o visual limpo, 
+       mas se quiser o cabeçalho colorido: */
     .data-head {
-        background-color: var(--accent1-color); /* Usando a cor de destaque 1 */
+        background-color: var(--primary-color);
     }
 
     .weather {
@@ -148,12 +159,12 @@ footer {
         right: 2%;
         transform: translate(-50%, -50%);
         background-color: rgba(255, 255, 255, 0.9); 
-        color: var(--primary-color); /* Usando a cor principal */
+        color: var(--secondary-color);
         padding: 10px 30px 10px;
     }
 
     .weather-head {
-        background-color: var(--accent1-color); /* Usando a cor de destaque 1 */
+        background-color: var(--primary-color);
     }
 }
 
@@ -162,6 +173,6 @@ footer {
     display: block;
     width: 50%;
     height: 2px;
-    background-color: var(--accent2-color); /* Usando a cor de destaque 2 */
+    background-color: var(--accent1-color); /* Linha em Dourado */
     margin: 10px auto;
 }
