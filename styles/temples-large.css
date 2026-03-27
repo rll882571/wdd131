@@ -54,7 +54,7 @@ main {
 .hamburger {
     display: none;
 }
-.navbar{
+nav.navbar{
   display: flex;
 }
 .active {
@@ -70,8 +70,5 @@ header {
     .hamburger {
         display: none; /* Garante que o ícone suma no desktop */
     }
-    .navbar a {
-      display: flex;
-    }
-
+    
 }
