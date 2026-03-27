@@ -157,3 +157,9 @@ footer p {
 figcaption {
     text-align: center;
 }
+.temple-card img {
+    width: 100%; /* Ocupa a largura do card */
+    height: auto; /* Ajusta a altura proporcionalmente para não distorcer */
+    aspect-ratio: 400 / 250; /* Mantém o espaço reservado para evitar o pulo (CLS) */
+    object-fit: cover; /* Corta levemente as bordas se necessário para preencher o espaço sem esticar */
+}
