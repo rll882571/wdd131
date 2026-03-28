@@ -3,23 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Review Confirmation</title>
+    <meta name="author" content="Rodrigo Ferrira de Lima">
+    <meta name="description" content="Submission Confirmation - W05 Assignment">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles/form.css">
+    
     <script defer src="scripts/getdates.js"></script>
     <script defer src="scripts/form.js"></script>
+    
+    <title>Review Confirmation</title>
 </head>
 <body>
     <header>
         <h1>Submission Received</h1>
     </header>
+
     <main>
         <div class="confirmation-container">
             <h2>Thank you for your feedback!</h2>
-            <p>Your review has been successfully submitted.</p>
-            <p class="counter-display">Total reviews submitted: <span id="review-count">0</span></p>
-            <a href="form.html" class="back-button">Submit another review</a>
+            <p>Your review has been successfully submitted and recorded.</p>
+            
+            <p class="counter-display">
+                Total reviews submitted: <span id="review-count">0</span>
+            </p>
+
+            <a href="form.html" class="back-button">Submit Another Review</a>
         </div>
     </main>
+
     <footer>
         <p>&copy; <span id="currentyear"></span> Rodrigo Lima, Fortaleza, Brazil</p>
         <p id="lastModified"></p>
