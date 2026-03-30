@@ -1,3 +1,4 @@
+/* temples.css - Styles for the Temples page */
 :root {
     --primary-color: #002F5D;   
     --secondary-color: #383434; 
@@ -7,13 +8,13 @@
     --heading-font: 'Montserrat', sans-serif;
     --body-font: 'Roboto', sans-serif;
 }
-
+/* Global Styles */
 body {
     margin: 0;
     font-family: "Roboto", serif;
     background-color: var(--accent3-color);
 }
-
+/* Header and Navigation */
 main {
     width: 100%;
     padding: 20px;
