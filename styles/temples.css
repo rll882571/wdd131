@@ -163,3 +163,25 @@ figcaption {
     aspect-ratio: 400 / 250; /* Mantém o espaço reservado para evitar o pulo (CLS) */
     object-fit: cover; /* Corta levemente as bordas se necessário para preencher o espaço sem esticar */
 }
+
+
+
+.hamburger span {
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
