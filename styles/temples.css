@@ -1,22 +1,13 @@
-/* ================================================================
-   PROJETO: ESTILO GLOBAL E COMPONENTES
-   DESCRIÇÃO: Estrutura de cores, tipografia e layout responsivo
-================================================================ 
-
-
-/* --- Variáveis de Raiz (Cores) --- */
 :root {
     --primary-color: #002F5D;   
     --secondary-color: #383434; 
     --accent1-color: #f0c040;   
     --accent2-color: #ffa500;   
     --accent3-color: #f4f4f4;   
-    /* Fontes */
     --heading-font: 'Montserrat', sans-serif;
     --body-font: 'Roboto', sans-serif;
 }
 
-/* --- Estilos Globais --- */
 body {
     margin: 0;
     font-family: "Roboto", serif;
@@ -35,10 +26,8 @@ h2 {
     font-size: 20px;
     color: var(--primary-color);
     font-family: var(--heading-font);
-    
 }
 
-/* --- Cabeçalho (Header) --- */
 header {
     background-color: var(--primary-color);
     padding: 10px 20px;
@@ -46,7 +35,6 @@ header {
     justify-content: space-between;
     align-items: center;
     top: 0;
-    
 }
 
 header h1 {
@@ -56,7 +44,6 @@ header h1 {
     font-family: var(--heading-font);
 }
 
-/* --- Navegação (Navbar) --- */
 .navbar {
     display: none;
 }
@@ -76,7 +63,6 @@ header h1 {
     color: #fff;
 }
 
-/* --- Menu Mobile e Hamburger --- */
 .hamburger {
     display: flex;
     flex-direction: column;
@@ -88,6 +74,19 @@ header h1 {
     width: 25px;
     height: 3px;
     background-color: var(--accent3-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 .navbar-mobile {
@@ -97,7 +96,6 @@ header h1 {
     top: 60px;
     border-radius: 8px;
     position: sticky;
-    
 }
 
 .navbar-mobile.open {
@@ -123,10 +121,15 @@ header h1 {
     cursor: pointer;
 }
 
-/* --- Layout de Grid --- */
 .grid-container {
     display: grid;
     grid-template-columns: 1fr;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
 }
 
 .grid-item p {
@@ -136,7 +139,17 @@ header h1 {
     font-weight: bold;
 }
 
-/* --- Rodapé (Footer) --- */
+figcaption {
+    text-align: center;
+}
+
+.temple-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 400 / 250;
+    object-fit: cover;
+}
+
 footer {
     background-color: var(--primary-color);
     color: var(--accent3-color);
@@ -148,40 +161,4 @@ footer {
 
 footer p {
     padding: 0;
-}
-.grid-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-figcaption {
-    text-align: center;
-}
-.temple-card img {
-    width: 100%; /* Ocupa a largura do card */
-    height: auto; /* Ajusta a altura proporcionalmente para não distorcer */
-    aspect-ratio: 400 / 250; /* Mantém o espaço reservado para evitar o pulo (CLS) */
-    object-fit: cover; /* Corta levemente as bordas se necessário para preencher o espaço sem esticar */
-}
-
-
-
-.hamburger span {
-    transition: all 0.3s ease-in-out;
-}
-
-
-
-
-.hamburger.active span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-}
-
-
-.hamburger.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
 }
