@@ -1,0 +1,292 @@
+
+:root {
+    /* Core Colors */
+    --primary-color: #383434;
+    --secondary-color: #002F5D;
+    --accent1-color: #f0c040;
+    --accent2-color: #ffa500;
+    --accent3-color: #f4f4f4;
+}
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header tela maior */
+header {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    padding: 0;
+    width: 99vw;
+    max-width: none;
+}
+
+header h1 {
+    margin: 0px;
+    font-size: 25px;
+    font-family: "Roboto Condensed", serif;
+    text-align: center;
+    padding: 15px 30px 10px 15px;
+    background: linear-gradient(to right, #003366, #0066cc);
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    height: 30px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    background: var(--primary-color);
+}
+
+nav ul li {
+    margin-right: 35px;
+}
+
+nav ul li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    list-style: none;
+    padding: 1rem;
+    font-family: "Roboto Condensed", serif;
+}
+/* efeito no nav home about us contact us */
+nav ul li a:hover {
+    color: var(--accent2-color);
+}
+
+/* Main Content */
+main {
+    display: grid;
+    padding: 10%;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+/* primeiro card */
+.card {
+    background-color: #f4f4f4;
+    width: 100%;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* titulo do primeiro card */
+.card-one {
+    
+    color: black;
+    padding: 1rem;
+    text-align: center;
+    
+    border-radius: 10px;
+}
+
+.card h2 {
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+/* Anos Escolares Section */
+.anos-escolares {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+}
+
+.anos-escolares h2 {
+    color: black;
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+.anos-escolares ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.anos-escolares li a {
+    display: block;
+    padding: 0.75rem;
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.anos-escolares li a:hover {
+    background-color: #ddd;
+}
+
+/* Slideshow */
+.slideshow-container {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+
+.slide img {
+    width: 100%;
+    
+    border-radius: 10px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev { left: 1rem; }
+.next { right: 1rem; }
+
+/* Footer (Mantido conforme o original) */
+footer {
+    background: linear-gradient(to right, #003366, #0066cc);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    height: auto;
+}
+
+#lastModified {
+    font-size: 10px;
+    margin-top: 10px;
+    color: var(--accent1-color);
+}
+
+
+/* Mostrar o botão em telas menores */
+@media (max-width: 768px) {
+    
+    .burger {
+        cursor: pointer;
+        padding: 10px;
+       
+        
+    }
+    
+    .burger div {
+        width: 25px;
+        height: 3px;
+        background-color: rgb(153, 15, 15);
+        margin: 5px;
+        transition: all 0.3s ease;
+        
+        
+    }
+
+    .nav-links {
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 40vh;
+        margin-top: 60px;
+        width: 20%;
+        background: linear-gradient(to right, #003366, #0066cc);
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        font-size: 12px;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .nav-active {
+        transform: translateX(0);
+    }
+/* modifica o main deichando em coluna */
+    main {
+        display: grid;
+        padding: 10%;
+        grid-template-columns: 250px;
+        gap: 1rem;
+    }
+    
+}
+
+/* Animação do Botão Hamburger */
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Animação dos Links do Menu */
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Estilos específicos para o formulário de cadastro */
+#signup-form {
+    display: flex;
+    flex-direction: column; /* Alinhar os elementos verticalmente */
+    width: 80%; /* Largura do formulário */
+    margin: 0 auto; /* Centralizar o formulário */
+}
+
+#signup-form label {
+    margin-bottom: 5px; /* Espaçamento entre rótulos e campos */
+}
+
+#signup-form input {
+    padding: 8px; /* Preenchimento interno dos campos */
+    margin-bottom: 10px; /* Espaçamento entre campos */
+    border: 1px solid #ccc; /* Borda dos campos */
+    border-radius: 5px; /* Arredondamento dos cantos */
+}
+
+#signup-form button {
+    padding: 10px 15px; /* Preenchimento interno do botão */
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remover borda do botão */
+    border-radius: 5px; /* Arredondamento dos cantos */
+    cursor: pointer; /* Cursor de mão ao passar sobre o botão */
+}
+
+#signup-form button:hover {
+    background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+}
