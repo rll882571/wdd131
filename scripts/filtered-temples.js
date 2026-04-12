@@ -90,6 +90,13 @@ const temples = [
     dedicated: "2002, May, 17",
     area: 48100,
     imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/campinas-brazil/400x250/campinas-brazil-temple-1030031-wallpaper.jpg"
+  },
+    {
+    templeName: "Albuquerque New Mexico",
+    location: "Albuquerque, New Mexico, United States",
+    dedicated: "2000, March, 5",
+    area: 34245,
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/albuquerque-new-mexico/400x250/albuquerque-temple-lds-998219-wallpaper.jpg"
   }
 ];
 

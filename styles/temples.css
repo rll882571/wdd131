@@ -76,7 +76,7 @@ header h1 {
     width: 25px;
     height: 3px;
     background-color: var(--accent3-color);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s steps(4);
 }
 
 .hamburger.active span:nth-child(1) {
